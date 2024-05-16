@@ -10,7 +10,7 @@ Data Rate = 31,250 bits/s
 The MakeCode's Midi library: (compiled in C or C++)
 It takes input in Binary or Hexadecimal
 Raw Serial: It converts them into ASCII characters and sends them through the usb serial protocol. 
-[simple ver. it uses serial.print(convertToChar(0xA0)); or serial.print(convertToChar(1010 0001));
+[ simple ver. it uses serial.print(convertToChar(0xA0)); or serial.print(convertToChar(1010 0001)); ]
 
 Hairless Midi to Serial Bridge: It reads the serial comm. port, converts the data into ??? and sends it to the virtual midi channel [here, Loop Midi]
 Loop Midi: Virtual Midi Channel, which is recognized by any DAW [Ableton, Studio One, FL Studio, Reaper, GarageBand, ProTools, etc.] or even Dj and Vj Software.
