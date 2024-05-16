@@ -1,6 +1,21 @@
 # Micro:bit Scratch Midi Controller
 Trying to implement the functionality of Scratch DJing onto BBC's micro:bit microcontroller
 
+# How to scratch (the very basics)
+A Scratch Dj has one of his hands on the Jog Wheels and the other one on the crossfader/channel balance of the mixer.
+
+While Scratching, the crossfader's curve is setup such that it works like an on/off switch. Therefore, it can easily be replaced by a capacitive touch button, or even a simple button (light, easy to press).
+
+A simple Jog Wheel is a rotary encoder [we're gonna avoid motorized/belt driven Jog Wheels].
+The distance travelled can be calculated from the accelerometer:
+1. Check if the x/y axis of the accelerometer is above 'varying' threshold.
+2. Add a constant displacement value to distance multiplied by a multiplier(currently only holds sign).
+3. Return distance/displacement as midi.
+4. Loop the algorithm every 'n' milliseconds.
+[Note: the conversion is an approximation]
+
+[without any multiplier, it feels more like scrubbing. Scratching is, in fact, scrubbing with emotion. Sorry!]
+
 # Basics of MIDI:
 Midi Signal [Around 3 bytes in length] = Status Byte (1 byte) + Pitch Byte (1 byte) + Data Byte (1 byte)
 Data Rate = 31,250 bits/s
