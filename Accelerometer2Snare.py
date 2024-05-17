@@ -1,4 +1,5 @@
 # this was to test if i can use the accelerometer to trigger a snare
+# written in MakeCode
 serial.set_baud_rate(BaudRate.BAUD_RATE115200)
 trig = False
 
