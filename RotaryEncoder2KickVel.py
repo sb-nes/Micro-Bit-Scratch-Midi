@@ -1,4 +1,5 @@
 # This was to implement and test how a rotary encoder works!
+# Written in Micro:bit Python Editor -> micro:python
 
 # Imports go at the top
 from microbit import *
