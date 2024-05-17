@@ -3,6 +3,7 @@
 
 # Imports go at the top
 from microbit import *
+import math
 
 class dir(enumerate):
     LEFT = 0
@@ -17,6 +18,8 @@ DIR = dir.NOT_MOVING
 Ready = False
 
 vel = 0x00
+x = 2
+y = 2
 
 # Sign Here
 
@@ -34,20 +37,43 @@ SET = pin13.read_digital()
 def clamp(val, lower, upper):
     return min(upper, max(lower, val))
 
+def move_pixel(pos = dir.LEFT):
+    if(pos == dir.RIGHT):
+        global x,y
+        x = x + (y*5)
+        x += 1
+        if(x>24): # wrap around
+            x = 0
+        y = int(x / 5)
+        x = int(x - (y*5))
+    else:
+        global x,y
+        x = x + (y*5)
+        x -= 1
+        if(x<0): # wrap around
+            x = 24
+        x = clamp(x, 0, 24)
+        y = int(x / 5)
+        x = int(x - (y*5))
+        
+
 def Rotate(d):
     global SET, Ready, vel
     if(Ready==True):
         Ready = False
         if d == dir.RIGHT:
             vel = clamp(vel + 0x01, 0, 127)
+            move_pixel(dir.RIGHT)
             # uart.write("Right\n")
         else:
             vel = clamp(vel - 0x01, 0, 127)
+            move_pixel()
             # uart.write("Left\n")
     return
 
 # Code in a 'while True:' loop repeats forever
 while True:
+    display.set_pixel(x,y,9)
     CLK = pin0.read_digital()
     DT = pin1.read_digital()
     #display.scroll(str(CLK)+str(DT))
@@ -67,3 +93,4 @@ while True:
             uart.write(chr(0x80)+chr(0x24)+chr(0x7F))
         Ready = True
     sleep(5)
+    display.clear()
