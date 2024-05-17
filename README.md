@@ -6,6 +6,9 @@ A Scratch Dj has one of his hands on the Jog Wheels and the other one on the cro
 
 While Scratching, the crossfader's curve is setup such that it works like an on/off switch. Therefore, it can easily be replaced by a capacitive touch button, or even a simple button (light, easy to press).
 
+[Pending Implementation]
+
+
 A simple Jog Wheel is a rotary encoder [we're gonna avoid motorized/belt driven Jog Wheels].
 The distance travelled can be calculated from the accelerometer:
 1. Check if the x/y axis of the accelerometer is above 'varying' threshold.
