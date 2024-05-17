@@ -1,3 +1,4 @@
+# this was to test if i can use the accelerometer to trigger a snare
 serial.set_baud_rate(BaudRate.BAUD_RATE115200)
 
 def on_every_interval():
