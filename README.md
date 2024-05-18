@@ -40,5 +40,7 @@ Loop Midi: Virtual Midi Channel, which is recognized by any DAW [Ableton, Studio
 
 # References:
 [To learn more about MIDI](https://midi.org/spec-detail)
+
 [MIDI CC List](https://anotherproducer.com/online-tools-for-musicians/midi-cc-list/#)
+
 [MIDI for DJ](https://github.com/mixxxdj/mixxx/wiki/MIDI-Crash-Course)
