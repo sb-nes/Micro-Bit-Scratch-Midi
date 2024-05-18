@@ -24,6 +24,7 @@ Midi Signal [Around 3 bytes in length] = Status Byte (1 byte) + Pitch Byte (1 by
 Data Rate = 31,250 bits/s
 
 ## Current Approach:
+My code currently doesn't use Interrupts for Rotary Encoders.
 
 The MakeCode's Midi library: (compiled in C or C++)
 It takes input in Binary or Hexadecimal
