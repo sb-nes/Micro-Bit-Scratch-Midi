@@ -28,7 +28,7 @@ CLK = pin13.read_digital()
 DT = pin15.read_digital()
 SET = pin13.read_digital()
 
-#machine.time_pulse_us(pin13, DT, timeout_us=-1)
+# Machine.time_pulse_us(pin13, DT, timeout_us=-1)
 
 # Midi Data Through Serial
 # uart.write(chr(0xB0)+chr(0x60)+chr(0x7F)+"\n")
@@ -59,6 +59,7 @@ def Rotate(d):
     global SET, Ready, vel, val
     if(Ready==True):
         Ready = False
+        # the 
         if d == dir.RIGHT:
             val = 0x3F
             move_pixel(dir.RIGHT)
