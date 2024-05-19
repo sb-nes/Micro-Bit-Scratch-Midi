@@ -13,11 +13,14 @@ A simple Jog Wheel is a rotary encoder [we're gonna avoid motorized/belt driven 
 
 Status code -> 0xB0 [midi CC at midi channel 0] & Pitch code -> Assigned CC Channel #
 
-Data Value:
+### Data Value:
 Left -> 0x01-0x3F
+
 Right -> 0x41-0x7F
 
-The distance travelled can be calculated from the accelerometer:
+
+
+### The distance travelled can be calculated from the accelerometer:
 1. Check if the x/y axis of the accelerometer is above 'varying' threshold.
 2. Add a constant displacement value to distance multiplied by a multiplier(currently only holds sign).
 3. Return distance/displacement as midi.
