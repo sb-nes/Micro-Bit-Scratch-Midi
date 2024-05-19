@@ -10,6 +10,11 @@ While Scratching, the crossfader's curve is setup such that it works like an on/
 
 
 A simple Jog Wheel is a rotary encoder [we're gonna avoid motorized/belt driven Jog Wheels].
+Status code -> 0xB0 [midi CC at midi channel 0] & Pitch code -> Assigned CC Channel #
+Data Value:
+Left -> 0x01-0x3F
+Right -> 0x41-0x7F
+
 The distance travelled can be calculated from the accelerometer:
 1. Check if the x/y axis of the accelerometer is above 'varying' threshold.
 2. Add a constant displacement value to distance multiplied by a multiplier(currently only holds sign).
