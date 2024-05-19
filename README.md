@@ -19,11 +19,11 @@ The distance travelled can be calculated from the accelerometer:
 
 [without any multiplier, it feels more like scrubbing. Scratching is, in fact, scrubbing with emotion. Sorry!]
 
-## Basics of MIDI:
+## Basics of MIDI
 Midi Signal [Around 3 bytes in length] = Status Byte (1 byte) + Pitch Byte (1 byte) + Data Byte (1 byte)
 Data Rate = 31,250 bits/s
 
-## Current Approach:
+## Current Approach
 My code currently doesn't use Interrupts for Rotary Encoders.
 
 The MakeCode's Midi library: (compiled in C or C++)
@@ -35,7 +35,7 @@ Raw Serial: It converts them into ASCII characters and sends them through the us
 Hairless Midi to Serial Bridge: It reads the serial comm. port, converts the data into ??? and sends it to the virtual midi channel [here, Loop Midi]
 Loop Midi: Virtual Midi Channel, which is recognized by any DAW [Ableton, Studio One, FL Studio, Reaper, GarageBand, ProTools, etc.] or even Dj and Vj Software.
 
-## Alternate Approaches:
+## Alternate Approaches
 1. Using an external 5-Din Midi Interface -> My audio interface supports 5-din midi connections.
 2. Over Bluetooth -> Micro:bit currently only supports IOS. We'll have to wait for this one.
 
