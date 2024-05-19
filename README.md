@@ -42,6 +42,8 @@ Raw Serial: It converts them into ASCII characters and sends them through the us
 
 [ simple ver. it uses serial.print(convertToChar(0xA0)); or serial.print(convertToChar(1010 0001)); ]
 
+example for MIDI DATA: serial.print( chr(0x80)+chr(0x24)+chr(0x7F) ) -> Note On, Channel 0, Pitch = C1, Velocity = 127
+
 Hairless Midi to Serial Bridge: It reads the serial comm. port, converts the data into ??? and sends it to the virtual midi channel [here, Loop Midi]
 Loop Midi: Virtual Midi Channel, which is recognized by any DAW [Ableton, Studio One, FL Studio, Reaper, GarageBand, ProTools, etc.] or even Dj and Vj Software.
 
