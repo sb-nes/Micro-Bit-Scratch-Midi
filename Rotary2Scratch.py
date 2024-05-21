@@ -1,5 +1,6 @@
 # This was to implement and test how a rotary encoder works!
 # Written in Micro:bit Python Editor -> micro:python
+# Using Numark MIXTRACK MIDI mapping on MIXXX
 
 # Imports go at the top
 from microbit import *
@@ -61,10 +62,10 @@ def Rotate(d):
         Ready = False
         # the 
         if d == dir.RIGHT:
-            val = 0x3F
+            val = 0x0F
             move_pixel(dir.RIGHT)
         else:
-            val = 0x7F
+            val = 0x72
             move_pixel()
     return
 
@@ -73,6 +74,17 @@ while True:
     display.set_pixel(x,y,9)
     CLK = pin0.read_digital()
     DT = pin1.read_digital()
+
+    if button_a.is_pressed():
+        uart.write(chr(0x90)+chr(0x42)+chr(0x7F))
+        sleep(1000)
+    if button_b.is_pressed():
+        uart.write(chr(0x90)+chr(0x42)+chr(0x00))
+    if pin2.is_touched():
+        uart.write(chr(0x90)+chr(0x3C)+chr(0x7F))
+    if pin_logo.is_touched():
+        uart.write(chr(0x90)+chr(0x48)+chr(0x7F))
+    
     #display.scroll(str(CLK)+str(DT))
     if(CLK ^ DT): # start rotate
         if(CLK ^ SET):
