@@ -29,6 +29,8 @@ CLK = pin13.read_digital()
 DT = pin15.read_digital()
 SET = pin13.read_digital()
 
+display.set_pixel(x,y,9)
+
 # Machine.time_pulse_us(pin13, DT, timeout_us=-1)
 
 # Midi Data Through Serial
@@ -62,7 +64,7 @@ def Rotate(d):
         Ready = False
         # the 
         if d == dir.RIGHT:
-            val = 0x0F
+            val = 0x0D
             move_pixel(dir.RIGHT)
         else:
             val = 0x72
@@ -83,7 +85,7 @@ while True:
     if pin2.is_touched():
         uart.write(chr(0x90)+chr(0x3C)+chr(0x7F))
     if pin_logo.is_touched():
-        uart.write(chr(0x90)+chr(0x48)+chr(0x7F))
+        uart.write(chr(0x90)+chr(0x4D)+chr(0x7F))
     
     #display.scroll(str(CLK)+str(DT))
     if(CLK ^ DT): # start rotate
