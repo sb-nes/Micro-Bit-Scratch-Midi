@@ -5,7 +5,7 @@ Trying to implement the functionality of Scratch DJing onto BBC's micro:bit micr
 * BBC's Micro:Bit controller [Main]
 * Rotary Encoder
 * [Hairless MIDI](https://projectgus.github.io/hairless-midiserial/) [Converts Serial MIDI and bridges connection between serial/COM and the virtual driver]
-* LoopMidi [For a Virtual Emulation of a Midi Adapter/Driver](https://www.tobias-erichsen.de/software/loopmidi.html)
+* [LoopMidi](https://www.tobias-erichsen.de/software/loopmidi.html) [For a Virtual Emulation of a Midi Adapter/Driver]
 
 ## How to scratch (the very basics)
 A Scratch Dj has one of his hands on the Jog Wheels and the other one on the crossfader/channel balance of the mixer.
