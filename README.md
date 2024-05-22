@@ -7,7 +7,7 @@ Trying to implement the functionality of Scratch DJing onto BBC's micro:bit micr
 * [Hairless MIDI](https://projectgus.github.io/hairless-midiserial/) [Converts Serial MIDI and bridges connection between serial/COM and the virtual driver]
 * [LoopMidi](https://www.tobias-erichsen.de/software/loopmidi.html) [For a Virtual Emulation of a Midi Adapter/Driver]
 
-## How to scratch (the very basics)
+## DJ Controller Overview
 A Scratch Dj has one of his hands on the Jog Wheels and the other one on the crossfader/channel balance of the mixer.
 
 While Scratching, the crossfader's curve is setup such that it works like an on/off switch. Therefore, it can easily be replaced by a capacitive touch button, or even a simple button (light, easy to press).
