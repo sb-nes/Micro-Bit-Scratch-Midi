@@ -26,7 +26,9 @@ Right -> 0x41-0x7F
 [a slow movement means it is covering a short distance every tick, thus it fires exactly once]
 
 [a fast movement means that it has covered a larger distance, thus needs to fire multiple times to achieve the same on the encoder]
+
 3. return how many times the midi signals data.
+
 [Note: the conversion is an approximation]
 
 [without any multiplier, it feels more like scrubbing. Scratching is, in fact, scrubbing with emotion. Sorry!]
