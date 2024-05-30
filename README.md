@@ -8,6 +8,7 @@ Trying to implement the functionality of Scratch DJing onto BBC's micro:bit micr
 * [LoopMidi](https://www.tobias-erichsen.de/software/loopmidi.html) [For a Virtual Emulation of a Midi Adapter/Driver]
 * Ableton 12 Lite
 * [Mixxx DJ](https://mixxx.org/)
+* (Optional) A CD glued onto the rotary encoder's knob
 
 ## DJ Controller Overview
 A Scratch Dj has one of his hands on the Jog Wheels and the other one on the crossfader/channel balance of the mixer.
