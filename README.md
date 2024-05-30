@@ -61,6 +61,11 @@ Loop Midi: Virtual Midi Channel, which is recognized by any DAW [Ableton, Studio
 1. Using an external 5-Din Midi Interface -> My audio interface supports 5-din midi connections.
 2. Over Bluetooth -> Micro:bit currently only supports IOS. We'll have to wait for this one.
 
+## Things to Fix/Change
+1. Play/Cue Button not working [Dexk 2]
+2. Crossfader implementation
+3. Play/Cue Button Light Implementation [Deck 2]
+
 # References:
 [To learn more about MIDI](https://midi.org/spec-detail)
 
